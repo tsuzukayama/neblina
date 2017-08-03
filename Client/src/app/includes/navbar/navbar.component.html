@@ -3,17 +3,25 @@
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Neblina</a>
+  <a class="navbar-brand" [routerLink]="['/home']">Neblina</a>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Extrato</a>
+        <a class="nav-link" [routerLink]="['/extrato']" routerLinkActive="active">Extrato</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Ações</a>
+      <li class="nav-item dropdown" dropdown>
+        <a class="nav-link dropdown-toggle" role="button" id="navbarDropdownMenuLink" dropdownToggle aria-haspopup="true" aria-expanded="false">
+          Transações
+        </a>
+        <ul *dropdownMenu class="dropdown-menu" role="menu">
+          <li role="menuitem"><a class="dropdown-item" href="#">DOC</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">TED</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Transferência interna</a></li>                  
+        </ul>
       </li>
     </ul>
   </div>
