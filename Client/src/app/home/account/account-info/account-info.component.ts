@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-account-info',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account-info.component.css']
 })
 export class AccountInfoComponent implements OnInit {
+
+  @Input() name: String;
+  @Input() balance: number;
 
   constructor() { }
 

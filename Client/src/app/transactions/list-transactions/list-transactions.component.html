@@ -1,6 +1,4 @@
 <div class="container main" *ngIf="statement">
-  <app-account-info class="account-info" name="{{statement.customerName}}" balance="{{statement.balance}}"></app-account-info>
-  <h1 class="display-4 pt-5 pb-4">Últimas transações</h1>
   <div class="list-group list-transactions">
     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let transaction of statement.transactions">
       <div class="d-flex w-100 justify-content-between">

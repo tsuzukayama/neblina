@@ -9,22 +9,22 @@ import {
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NavbarComponent } from './includes/navbar/navbar.component';
+import { AccountInfoComponent } from './home/account/account-info/account-info.component';
+
+import { StatementService } from './shared/services/statement.service';
 
 import { routing } from './app.routing';
-import { NavbarComponent } from './includes/navbar/navbar.component';
-import { ListTransacoesComponent } from './includes/transacoes/list-transacoes/list-transacoes.component';
-import { AccountInfoComponent } from './home/account/account-info/account-info.component';
-import { ExtratoComponent } from './extrato/extrato.component';
+import { ListTransactionsComponent } from './transactions/list-transactions/list-transactions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    NavbarComponent,
-    ListTransacoesComponent,
-    AccountInfoComponent,
-    ExtratoComponent
+    NavbarComponent,    
+    AccountInfoComponent,    
+    ListTransactionsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,9 @@ import { ExtratoComponent } from './extrato/extrato.component';
     AlertModule.forRoot(),
     BsDropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    StatementService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

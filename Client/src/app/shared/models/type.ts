@@ -1,4 +1,4 @@
-enum Type {
+export enum Type {
     InternalRealTime,
     ExternalRealTime,
     InternalScheduled,

@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 // Models
-import { Statement } from '../shared/models/statement';
+import { Statement } from '../../shared/models/statement';
 
 // Services
-import { StatementService } from '../shared/services/statement.service';
+import { StatementService } from '../../shared/services/statement.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-list-transactions',
+  templateUrl: './list-transactions.component.html',
+  styleUrls: ['./list-transactions.component.css']
 })
-export class HomeComponent implements OnInit {
+export class ListTransactionsComponent implements OnInit {
 
   statement: Statement;
 

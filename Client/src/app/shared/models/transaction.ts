@@ -1,13 +1,13 @@
 import { Account } from './account';
+import { Type } from './type';
+import { Status } from './status';
 
 export class Transaction {
     transactionId: number;
-    destinationBankId: number;
-    amount: number;
-
+    date: String;
+    description: String;
+    credit: number;
+    debit: number;
     transactionType: Type;
-    transactionStatus: Status;
-
-    accountId: number;
-    account: Account;
+    transactionStatus: Status;    
 }
