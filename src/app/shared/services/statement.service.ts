@@ -1,3 +1,5 @@
+import * as Global from '../../global';
+
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
@@ -8,7 +10,7 @@ import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class StatementService {
-    private url = 'http://localhost:5000/statement/';
+    private url = Global.BASE_API_URL + 'statement/';
 
     constructor(private http: Http) { }
 

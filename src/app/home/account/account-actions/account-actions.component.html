@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-12">
+    <button (click)="changeType('s')" role="button" class="btn btn-primary">Saque</button>
+    <button (click)="changeType('d')" role="button" class="btn btn-primary">Depósito</button>
+  </div>
+</div>
+
+<div class="form-group row action-row" *ngIf="type !== 'n'">
+  <div class="col-6">
+    <input class="form-control" type="number" [(ngModel)]="op.amount">
+  </div>
+  <div class="col-6">
+    <button role="button" (click)="deposit()" class="btn btn-primary" *ngIf="type === 'd'">Depositar</button>
+    <button role="button" (click)="withdrawal()" class="btn btn-primary" *ngIf="type === 's'">Retirar</button>
+  </div>
+</div>
+<div class="fixed-bottom" *ngFor="let alert of alerts">
+  <alert [type]="alert.type" class="bottom-alert" [dismissOnTimeout]="alert.timeout">{{ alert.msg }}</alert>
+</div>

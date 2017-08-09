@@ -8,6 +8,6 @@ export class Transaction {
     description: String;
     credit: number;
     debit: number;
-    transactionType: Type;
-    transactionStatus: Status;    
+    transactionType: String;
+    transactionStatus: String;    
 }

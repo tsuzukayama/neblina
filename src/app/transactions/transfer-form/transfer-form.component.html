@@ -1,0 +1,52 @@
+<div class="container main">
+  <div class="card">
+    <div class="card-block">
+      <form [formGroup]="bankForm" (ngSubmit)="transferMoney()">
+        <div class="row">
+          <div class="form-group col-md-4">
+            <div class="d-flex flex-column">
+              <label for="bank" class="control-label">Tipo</label>
+              <select class="form-control" id="bank" [(ngModel)]="bank" formControlName="bank">                
+                <option [selected]="true" disabled>Selecione o tipo</option>
+                <option [ngValue]="type.name" *ngFor="let type of types">{{type.desc}}</option>                
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <div class="d-flex flex-column">
+              <label for="destinationBankId" class="control-label">Banco destino</label>
+              <input type="number" class="form-control" id="destinationBankId" placeholder="XXXXXXX" [(ngModel)]="transfer.destinationBankId"
+                formControlName="destinationBankId">
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="d-flex flex-column">
+              <label for="destinationAccountId" class="control-label">Conta destino</label>
+              <input type="number" class="form-control" id="destinationAccountId" placeholder="XXXXXXX" [(ngModel)]="transfer.destinationAccountId"
+                formControlName="destinationAccountId">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <div class="d-flex flex-column">
+              <label for="amount" class="control-label">Quantia</label>
+              <input type="number" class="form-control" id="amount" placeholder="R$ XXXX,XX" [(ngModel)]="transfer.amount" formControlName="amount">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <button type="submit" class="btn btn-primary float-right">Transferir</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+<div class="fixed-bottom" *ngFor="let alert of alerts">
+  <alert [type]="alert.type" class="bottom-alert" [dismissOnTimeout]="alert.timeout">{{ alert.msg }}</alert>
+</div>

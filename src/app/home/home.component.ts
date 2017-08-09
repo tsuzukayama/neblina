@@ -1,3 +1,4 @@
+import * as Global from '../global';
 import { Component, OnInit } from '@angular/core';
 
 // Models
@@ -30,6 +31,14 @@ export class HomeComponent implements OnInit {
         this.statement = data;
         console.log(data);
       });
+  }
+
+  getClass(status) {
+    if (status === 'Successful' || status === 'Authorized')
+      return 'badge-success';
+    else if (status === 'Canceled' || status === 'Aborted' || status === 'Denied' || status === 'Failed')
+      return 'badge-danger';
+    else return 'badge-primary';
   }
 
 }

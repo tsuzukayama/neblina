@@ -1,8 +1,7 @@
 <div class="card">
   <div class="card-block">
     <h4 class="card-title">Saldo: {{balance | currency:'BRL':true}}</h4>    
-    <p class="card-text">{{name}}</p>
-    <a href="#" class="card-link">Saque</a>
-    <a href="#" class="card-link">Depósito</a>    
+    <p class="card-text">{{name}}</p>      
+    <account-actions></account-actions> 
   </div>
 </div>

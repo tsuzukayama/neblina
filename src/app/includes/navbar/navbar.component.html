@@ -12,16 +12,8 @@
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/transactions']" routerLinkActive="active">Extrato</a>
       </li>
-      <li class="nav-item dropdown" dropdown>
-        <a class="nav-link dropdown-toggle" role="button" id="navbarDropdownMenuLink" dropdownToggle aria-haspopup="true" aria-expanded="false">
-          Transações
-        </a>
-        <ul *dropdownMenu class="dropdown-menu" role="menu">
-          <li role="menuitem"><a class="dropdown-item" href="#">DOC</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">TED</a></li>
-          <li class="divider dropdown-divider"></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Transferência interna</a></li>                  
-        </ul>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/transfer/new']" routerLinkActive="active">Nova transferência</a>
       </li>
     </ul>
   </div>
