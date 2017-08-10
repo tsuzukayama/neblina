@@ -3,12 +3,12 @@ export const BASE_API_URL = 'http://localhost:52140/';
 
 export const alertSucess = {
     type: 'success',
-    msg: `Transferido com sucesso`,
+    msg: `Transfer successful`,
     timeout: 3000
   };
 
 export const alertInvalid = {
     type: 'danger',
-    msg: `Transação inválida. Preencha todos os campos`,
+    msg: `Invalid transfer. Fill/Check all inputs.`,
     timeout: 3000
   };

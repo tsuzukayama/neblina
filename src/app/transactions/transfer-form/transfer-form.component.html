@@ -5,9 +5,9 @@
         <div class="row">
           <div class="form-group col-md-4">
             <div class="d-flex flex-column">
-              <label for="bank" class="control-label">Tipo</label>
+              <label for="bank" class="control-label">Type</label>
               <select class="form-control" id="bank" [(ngModel)]="bank" formControlName="bank">                
-                <option [selected]="true" disabled>Selecione o tipo</option>
+                <option [selected]="true" disabled>Choose transaction type</option>
                 <option [ngValue]="type.name" *ngFor="let type of types">{{type.desc}}</option>                
               </select>
             </div>
@@ -16,14 +16,14 @@
         <div class="row">
           <div class="form-group col-md-4">
             <div class="d-flex flex-column">
-              <label for="destinationBankId" class="control-label">Banco destino</label>
+              <label for="destinationBankId" class="control-label">Destination Bank ID</label>
               <input type="number" class="form-control" id="destinationBankId" placeholder="XXXXXXX" [(ngModel)]="transfer.destinationBankId"
                 formControlName="destinationBankId">
             </div>
           </div>
           <div class="form-group col-md-4">
             <div class="d-flex flex-column">
-              <label for="destinationAccountId" class="control-label">Conta destino</label>
+              <label for="destinationAccountId" class="control-label">Destination Account ID</label>
               <input type="number" class="form-control" id="destinationAccountId" placeholder="XXXXXXX" [(ngModel)]="transfer.destinationAccountId"
                 formControlName="destinationAccountId">
             </div>
@@ -32,14 +32,14 @@
         <div class="row">
           <div class="form-group col-md-4">
             <div class="d-flex flex-column">
-              <label for="amount" class="control-label">Quantia</label>
+              <label for="amount" class="control-label">Amount</label>
               <input type="number" class="form-control" id="amount" placeholder="R$ XXXX,XX" [(ngModel)]="transfer.amount" formControlName="amount">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <button type="submit" class="btn btn-primary float-right">Transferir</button>
+            <button type="submit" class="btn btn-primary float-right">Transfer</button>
           </div>
         </div>
       </form>

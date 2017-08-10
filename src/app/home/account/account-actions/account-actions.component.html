@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-12">
-    <button (click)="changeType('s')" role="button" class="btn btn-primary">Saque</button>
-    <button (click)="changeType('d')" role="button" class="btn btn-primary">Depósito</button>
+    <button (click)="changeType('s')" role="button" class="btn btn-primary">Deposit</button>
+    <button (click)="changeType('d')" role="button" class="btn btn-primary">Withdrawal</button>
   </div>
 </div>
 
@@ -10,8 +10,8 @@
     <input class="form-control" type="number" [(ngModel)]="op.amount">
   </div>
   <div class="col-6">
-    <button role="button" (click)="deposit()" class="btn btn-primary" *ngIf="type === 'd'">Depositar</button>
-    <button role="button" (click)="withdrawal()" class="btn btn-primary" *ngIf="type === 's'">Retirar</button>
+    <button role="button" (click)="deposit()" class="btn btn-primary" *ngIf="type === 'd'">Deposit</button>
+    <button role="button" (click)="withdrawal()" class="btn btn-primary" *ngIf="type === 's'">Withdrawal</button>
   </div>
 </div>
 <div class="fixed-bottom" *ngFor="let alert of alerts">
