@@ -6,10 +6,12 @@ import {
   FormsModule,
   ReactiveFormsModule
 } from '@angular/forms';
+
 import {
   AlertModule,
   BsDropdownModule
 } from 'ngx-bootstrap';
+import { TextMaskModule } from 'angular2-text-mask';
 
 import { AppComponent } from './app.component';
 
@@ -49,7 +51,8 @@ import { AccountActionsComponent } from './home/account/account-actions/account-
     HttpModule,
     routing,
     AlertModule.forRoot(),
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    TextMaskModule
   ],
   providers: [
     StatementService,

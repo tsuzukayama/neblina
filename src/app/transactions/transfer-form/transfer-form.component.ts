@@ -43,6 +43,8 @@ export class TransferFormComponent implements OnInit {
     },
   ];
 
+  private moneyMask = Global.moneyMask;
+
   constructor(
     private formBuilder: FormBuilder,
     private transfersService: TransfersService

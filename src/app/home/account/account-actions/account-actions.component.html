@@ -1,13 +1,13 @@
 <div class="row">
   <div class="col-sm-12">
-    <button (click)="changeType('s')" role="button" class="btn btn-primary">Deposit</button>
-    <button (click)="changeType('d')" role="button" class="btn btn-primary">Withdrawal</button>
+    <button (click)="changeType('d')" role="button" class="btn btn-primary">Deposit</button>
+    <button (click)="changeType('s')" role="button" class="btn btn-primary">Withdrawal</button>
   </div>
 </div>
 
 <div class="form-group row action-row" *ngIf="type !== 'n'">
   <div class="col-6">
-    <input class="form-control" type="number" [(ngModel)]="op.amount">
+    <input class="form-control" type="text" [(ngModel)]="op.amountMask" [textMask]="{mask: moneyMask}" placeholder="$ XXX,XXX">
   </div>
   <div class="col-6">
     <button role="button" (click)="deposit()" class="btn btn-primary" *ngIf="type === 'd'">Deposit</button>

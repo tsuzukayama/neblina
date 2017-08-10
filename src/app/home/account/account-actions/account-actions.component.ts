@@ -17,12 +17,16 @@ export class AccountActionsComponent implements OnInit {
 
   private type = 'n';
   private op: Amount = new Amount();
-
   public alerts: any = [];
+
+  private moneyMask = Global.moneyMask;
 
   constructor(
     private transactionService: TransactionService
-  ) { }
+  ) {
+    this.op.amount = 0;
+    this.op.amountMask = '';
+  }
 
   ngOnInit() {
   }
@@ -32,18 +36,25 @@ export class AccountActionsComponent implements OnInit {
   }
 
   deposit() {
+    this.op.amount = +this.op.amountMask.replace(/\D+/g, '');
     if (this.op.amount > 0)
       this.transactionService.deposit(this.op)
         .subscribe(
-        data => this.alerts.push(Global.alertSucess));
+        data => this.alerts.push(Global.alertSucess),
+        err => console.log('Error on Deposit: ' + err));
     else this.alerts.push(Global.alertInvalid);
   }
 
   withdrawal() {
+    this.op.amount = +this.op.amountMask.replace(/\D+/g, '');
     if (this.op.amount > 0)
       this.transactionService.withdrawal(this.op)
         .subscribe(
-        data => this.alerts.push(Global.alertSucess));
+        data => this.alerts.push(Global.alertSucess),
+        err => {
+          this.alerts.push(Global.alertInvalid);
+          console.log('Error on Withdrawal: ' + err);
+        });
     else this.alerts.push(Global.alertInvalid);
   }
 }
