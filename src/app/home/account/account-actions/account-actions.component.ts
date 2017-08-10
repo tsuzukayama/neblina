@@ -11,7 +11,7 @@ import { TransactionService } from '../../../shared/services/transaction.service
 @Component({
   selector: 'account-actions',
   templateUrl: './account-actions.component.html',
-  styleUrls: ['./account-actions.component.css']
+  styleUrls: ['./account-actions.component.scss']
 })
 export class AccountActionsComponent implements OnInit {
 

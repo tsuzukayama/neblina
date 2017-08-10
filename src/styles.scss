@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+$white:  #fff !default;
+$black:  #000 !default;
+$red:    #d9534f !default;
+$orange: #f0ad4e !default;
+$yellow: #ffd500 !default;
+$green:  #5cb85c !default;
+$blue:   #0275d8 !default;
+$teal:   #5bc0de !default;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+$colors: $red, $orange, $yellow, $green, $blue, $teal, $pink, $purple;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:             nth($colors, random(length($colors))) !default;
+@import "../node_modules/bootstrap/scss/bootstrap";
+.top-buffer {
+  margin-top: 20px;
+}
+
+.main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bottom-alert {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  right: 50px;
+}

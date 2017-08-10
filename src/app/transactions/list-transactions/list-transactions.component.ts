@@ -8,7 +8,7 @@ import { StatementService } from '../../shared/services/statement.service';
 @Component({
   selector: 'app-list-transactions',
   templateUrl: './list-transactions.component.html',
-  styleUrls: ['./list-transactions.component.css']
+  styleUrls: ['./list-transactions.component.scss']
 })
 export class ListTransactionsComponent implements OnInit {
 

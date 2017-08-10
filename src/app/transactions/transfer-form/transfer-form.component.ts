@@ -17,7 +17,7 @@ import { TransfersService } from '../shared/services/transfers.service';
 
 @Component({
   templateUrl: './transfer-form.component.html',
-  styleUrls: ['./transfer-form.component.css']
+  styleUrls: ['./transfer-form.component.scss']
 })
 export class TransferFormComponent implements OnInit {
 
@@ -39,7 +39,7 @@ export class TransferFormComponent implements OnInit {
     },
     {
       name: 'same',
-      desc: 'Transferência interna'
+      desc: 'Internal transfer'
     },
   ];
 
