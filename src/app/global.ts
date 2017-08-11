@@ -1,7 +1,7 @@
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
 
 //export const BASE_API_URL = 'http://localhost:5000/';
-export const BASE_API_URL = 'http://localhost:52140/';
+export const BASE_API_URL = 'http://174.138.77.161/';
 
 export const alertSucess = {
     type: 'success',
