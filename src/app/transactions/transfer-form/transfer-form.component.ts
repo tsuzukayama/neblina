@@ -62,6 +62,7 @@ export class TransferFormComponent implements OnInit {
 
   transferMoney() {
     console.log(this.bank);
+    this.transfer.amount = +this.transfer.amountMask.replace(/\D+/g, '');
     if (this.bankForm.valid)
       this.transfersService.sendTransfer(this.bank, this.transfer)
         .subscribe(
