@@ -15,11 +15,11 @@ import { TransactionService } from '../../../shared/services/transaction.service
 })
 export class AccountActionsComponent implements OnInit {
 
-  private type = 'n';
-  private op: Amount = new Amount();
-  public alerts: any = [];
+  type = 'n';
+  op: Amount = new Amount();
+  alerts: any = [];
 
-  private moneyMask = Global.moneyMask;
+  moneyMask = Global.moneyMask;
 
   constructor(
     private transactionService: TransactionService

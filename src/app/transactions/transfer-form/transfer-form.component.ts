@@ -21,14 +21,14 @@ import { TransfersService } from '../shared/services/transfers.service';
 })
 export class TransferFormComponent implements OnInit {
 
-  private transfer: Transfer = new Transfer();
+  transfer: Transfer = new Transfer();
 
-  private bank: string;
-  private bankForm: FormGroup;
+  bank: string;
+  bankForm: FormGroup;
 
-  public alerts: any = [];
+  alerts: any = [];
 
-  private types = [
+  types = [
     {
       name: 'another',
       desc: 'DOC'
@@ -43,7 +43,7 @@ export class TransferFormComponent implements OnInit {
     },
   ];
 
-  private moneyMask = Global.moneyMask;
+  moneyMask = Global.moneyMask;
 
   constructor(
     private formBuilder: FormBuilder,
