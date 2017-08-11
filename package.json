@@ -30,7 +30,7 @@
     "tether": "^1.4.0",
     "text-mask-addons": "^3.6.0",
     "zone.js": "^0.8.14",
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0-alpha.6"
   },
   "devDependencies": {
     "@angular/cli": "1.2.6",
