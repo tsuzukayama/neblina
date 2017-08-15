@@ -8,8 +8,10 @@ Feito em Angular 4, com o Angular-Cli.
 ## Server de dev
 
 Execute `npm install` caso for a primeira execução;
-Instale o Angular-Cli com `npm install -g @angular/cli`
-Execute `ng serve`
+
+Instale o Angular-Cli com `npm install -g @angular/cli`;
+
+Execute `ng serve`;
 
 ## Code scaffolding
 
